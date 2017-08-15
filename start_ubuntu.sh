@@ -15,7 +15,7 @@ apt-get install -y --fix-missing ca-certificates git curl wget vim unzip python-
 apt-get install -y --fix-missing software-properties-common python-software-properties # lets you add-apt-repository
 
 # multimedia supoprt
-apt-get install -y libtbb2 libtbb-dev libjpeg8-dev libtiff5-dev libpng12-dev libdc1394-22-dev libjpeg62 libjpeg62-dev libjpeg-progs libfreetype6-dev libopenimageio-dev libglew-dev libopenexr-dev# img #libjasper, jasper?
+apt-get install -y libtbb2 libtbb-dev libjpeg8-dev libtiff5-dev libdc1394-22-dev libjpeg62 libjpeg62-dev libjpeg-progs libpng-dev zlib1g-dev libfreetype6-dev libopenimageio-dev libglew-dev libopenexr-dev # images?
 apt-get install -y libavcodec-dev libavformat-dev libswscale-dev libv4l-dev # video
 
 # matrix operations
