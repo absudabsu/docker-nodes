@@ -1,0 +1,12 @@
+FROM ubuntu:17.10
+MAINTAINER Abhejit Rajagopal <rajagopal.abhejit@gmail.com>
+
+WORKDIR /root/setup/
+
+ADD start_ubuntu.sh /root/setup/
+RUN chmod +x /root/setup/start_ubuntu.sh && /root/setup/start_ubuntu.sh
+
+VOLUME /srv/
+VOLUME /home
+
+CMD ["/bin/bash"]
