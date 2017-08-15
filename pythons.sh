@@ -50,7 +50,7 @@ conda config --prepend channels intel # adds to top of priority list
 conda config --append channels conda-forge # adds to bottom of priority list
 conda install -y conda
 
-conda install -y numpy scipy matplotlib pandas sympy networkx # base (this should already be installed)
+conda install -y numpy scipy matplotlib pandas sympy networkx cython # base (this should already be installed)
 
 conda install -y readline setuptools six # cool stuff
 pip install readline npm #just in case..
