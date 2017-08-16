@@ -7,14 +7,14 @@ ADD pythons.sh /root/setup
 RUN chmod +x /root/setup/pythons.sh && /root/setup/pythons.sh
 
 ADD blender.sh /root/setup
-RUN chmod +x /root/setup/blender.sh && /root/setup/blender.sh
 
 ADD julia.sh /root/setup
 
 ADD startup.sh /root/setup
 RUN chmod +x /root/setup/startup.sh
 
-VOLUME /srv/
 VOLUME /home
+VOLUME /srv/
+VOLUME /srv/jupyterhub/
 
 CMD ["/root/setup/startup.sh"]
