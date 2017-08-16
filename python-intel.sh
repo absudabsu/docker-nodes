@@ -21,13 +21,13 @@ echo '--> '$platform
 echo '--> Getting python...' # my serial number: CTGC-V68SLW48
 check=$(which python3)
 python_name=python35
-if [ $check == '/opt/intel/intelpython35/bin//python3' ]; then
+if [ $check == '/opt/intel/intelpython3/bin//python3' ]; then
   echo "** got python already! **"
 else
-  if [ $platform == 'linux' ] && [ '$(which python3)' != '/opt/intel/intelpython35/bin//python3' ]; then
+  if [ $platform == 'linux' ] && [ '$(which python3)' != '/opt/intel/intelpython3/bin//python3' ]; then
     curl -L http://registrationcenter-download.intel.com/akdlm/irc_nas/tec/11602/l_python3_pu3_2017.3.052.tgz -o ${python_name}.tgz
     installdir=./l_python3_pu3_2017.3.052
-  elif [ $platform == 'mac' ] && [ '$(which python3)' != '/opt/intel/intelpython35/bin//python3' ]; then
+  elif [ $platform == 'mac' ] && [ '$(which python3)' != '/opt/intel/intelpython3/bin//python3' ]; then
     curl -L http://registrationcenter-download.intel.com/akdlm/irc_nas/tec/11607/intelpython35-2017.3.053.tgz -o ${python_name}.tgz
     installdir=./intelpython35-2017.3.053.app/Contents/MacOS
   fi
