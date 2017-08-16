@@ -52,7 +52,7 @@ git clone https://github.com/tensorflow/tensorflow.git $TF_DIR && \
     cd $TF_DIR && \
     git checkout r1.3
 cd $TF_DIR
-export CI_BUILD_PYTHON=/opt/intel/intelpython35/bin//python3
+export CI_BUILD_PYTHON=/opt/intel/intelpython3/bin//python3
 tensorflow/tools/ci_build/builds/configured CPU \
     bazel build -c opt --cxxopt="-D_GLIBCXX_USE_CXX11_ABI=0" \
         tensorflow/tools/pip_package:build_pip_package && \
