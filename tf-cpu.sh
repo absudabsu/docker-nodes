@@ -22,6 +22,10 @@ ORIG_DIR=$(pwd)
 echo $(which python3)
 echo $(which python)
 echo $(which pip)
+source ~/.bash_profile
+echo $(which python3)
+echo $(which python)
+echo $(which pip)
 ## -----------------------------------------------------------------------------
 
 ## Build from scratch baby
