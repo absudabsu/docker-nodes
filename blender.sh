@@ -15,4 +15,6 @@ apt-get -y install autoconf automake autopoint bsdmainutils debhelper dh-autorec
 # python3-certifi python3-chardet python3-idna python3-pkg-resources python3-requests python3-six python3-urllib3
 # build_files/build_environment/install_deps.sh --with-all --skip-osl # this actually should work on Fedora, but NOT on debian
 
+source ~/.bash_profile # load intelpython or path listed there.
+
 make bpy
