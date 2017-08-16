@@ -11,7 +11,7 @@ RUN chmod +x /root/setup/python-intel.sh && /root/setup/python-intel.sh
 
 WORKDIR /root/setup/
 ADD python-pkgs.sh /root/setup/
-RUN chmod +x /root/setup/python-intel.sh && /root/setup/python-pkgs.sh
+RUN chmod +x /root/setup/python-pkgs.sh && /root/setup/python-pkgs.sh
 
 WORKDIR /root/setup/
 ADD blender.sh /root/setup/
