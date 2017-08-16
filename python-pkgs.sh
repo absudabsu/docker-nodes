@@ -2,6 +2,7 @@
 ## SUDO CHECK ------------------------------------------------------------------
 [ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
 ## -----------------------------------------------------------------------------
+source ~/.bash_profile
 echo '--> Getting python packages' # we have unity between pip and conda now :)
 # our strategy is to use conda unless its not added yet, since it has better dependency resolution than pip
 

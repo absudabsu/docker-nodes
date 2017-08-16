@@ -3,7 +3,6 @@
 [ "$UID" -eq 0 ] || exec sudo bash "$0" "$@"
 ## -----------------------------------------------------------------------------
 
-# source /root/.bash_profile
 git clone http://git.blender.org/blender.git
 cd blender
 git submodule update --init --recursive
