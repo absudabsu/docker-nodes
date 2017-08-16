@@ -1,0 +1,16 @@
+FROM sirgogo/py-base
+MAINTAINER Abhejit Rajagopal <rajagopal.abhejit@gmail.com>
+
+WORKDIR /root/setup/
+ADD tf-cpu.sh /root/setup
+RUN chmod +x /root/setup/tf-cpu.sh && /root/setup/tf-cpu.sh
+
+WORKDIR /root/setup/
+ADD startup.sh /root/setup
+RUN chmod +x /root/setup/startup.sh
+
+VOLUME /home
+VOLUME /srv/
+VOLUME /srv/jupyterhub/
+
+CMD ["/root/setup/startup.sh"]

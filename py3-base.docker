@@ -1,0 +1,20 @@
+from intelpython/intelpython3_full:latest
+MAINTAINER Abhejit Rajagopal <rajagopal.abhejit@gmail.com>
+
+WORKDIR /root/setup/
+
+ADD python-pkgs.sh /root/setup
+RUN chmod +x /root/setup/python-pkgs.sh && /root/setup/python-pkgs.sh
+
+ADD blender.sh /root/setup
+
+ADD julia.sh /root/setup
+
+ADD startup.sh /root/setup
+RUN chmod +x /root/setup/startup.sh
+
+VOLUME /home
+VOLUME /srv/
+VOLUME /srv/jupyterhub/
+
+CMD ["/root/setup/startup.sh"]
