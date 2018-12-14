@@ -107,8 +107,8 @@ RUN pip install laspy Tyf
 RUN pip install jax jaxlib tensorflow-gpu jupyter-tensorboard
 
 #RUN apt-get update # && apt-get install -y julia
-RUN wget https://julialang-s3.julialang.org/bin/linux/x64/1.0/julia-1.0.0-linux-x86_64.tar.gz && tar xvfa julia-1.0.0-linux-x86_64.tar.gz && 
-ENV PATH /root/julia-1.0.0/bin/:$PATH
+RUN wget https://julialang-s3.julialang.org/bin/linux/x64/1.0/julia-1.0.0-linux-x86_64.tar.gz && tar xvfa julia-1.0.0-linux-x86_64.tar.gz
+ENV PATH /root/julia-1.0.0/bin:$PATH
 RUN mkdir -p ~/.julia/config/ && echo "using Pkg" >> ~/.julia/config/startup.jl
 
 SHELL ["/bin/zsh", "-c"]
